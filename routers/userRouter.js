@@ -1,4 +1,10 @@
-import express from 'express';
+import express from "express";
+import routes from "../routes";
 
-export const userRouter = express.Router();
-userRouter.get("/", (req, res) => { res.send('This is user Index.'); })
+const userRouter = express.Router();
+userRouter.get(routes.userDetail, (req, res) => {
+  console.log("##", req.params);
+  res.send("This is user Index.");
+});
+
+export default userRouter;

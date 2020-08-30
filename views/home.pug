@@ -2,4 +2,7 @@ extends layouts/main.pug
 
 block content
 	h1 "this is first"
-	p sdafasdfas
+	.video__list
+		each video in videos
+			.video__title #{video.title}
+

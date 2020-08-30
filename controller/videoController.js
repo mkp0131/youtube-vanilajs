@@ -7,6 +7,7 @@ export const home = (req, res) => {
 export const upload = (req, res) => {
   res.render("upload");
 };
+
 export const editVideo = (req, res) => {
   const {
     params: { id: videoId },

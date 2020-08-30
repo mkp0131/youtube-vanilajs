@@ -1,8 +1,14 @@
-extends layouts/main.pug
+extends layouts/main
+include mixins/videoBlock
 
 block content
 	h1 "this is first"
 	.video__list
 		each video in videos
-			.video__title #{video.title}
+			+videoBlock({
+				title: video.title,
+				videoFile: video.videoFile,
+				views: video.views,
+			})
+
 

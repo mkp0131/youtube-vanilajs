@@ -1,8 +1,9 @@
 header.header
 	.header-column
 		h1
-			i.fab.fa-youtube
-			| #{siteName}
+			a(href=routes.home)
+				i.fab.fa-youtube
+				| #{siteName}
 	.header-column
 		form(action=routes.search method="get")
 			input(type="text" name="term")
@@ -12,5 +13,5 @@ header.header
 				a(href="#")
 					| Login
 			li
-				a(href="#")
+				a(href=routes.join)
 					| Join

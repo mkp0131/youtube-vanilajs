@@ -1,0 +1,9 @@
+mixin videoBlock(video={})
+
+	.videoBlock
+		.videoBlock__thumbnail
+			video(src=video.videoFile controls="true")
+		.videoBlock__title
+			| #{video.title}
+		.videoBlock__views
+			| #{video.views}

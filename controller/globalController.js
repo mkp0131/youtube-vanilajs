@@ -30,5 +30,12 @@ export const getLogin = (req, res) => {
   res.render("login");
 };
 export const postLogin = (req, res) => {
+  // 로그인 처리 구현해야함
+  res.redirect(routes.home);
+};
+
+export const logout = (req, res) => {
+  res.locals.user = {};
+  console.log("logout", res.locals.user);
   res.redirect(routes.home);
 };

@@ -6,6 +6,7 @@ import {
   postJoin,
   getLogin,
   postLogin,
+  logout,
 } from "../controller/globalController";
 import { home } from "../controller/videoController";
 
@@ -18,5 +19,7 @@ globalRouter.post(routes.join, postJoin);
 
 globalRouter.get(routes.login, getLogin);
 globalRouter.post(routes.login, postLogin);
+
+globalRouter.get(routes.logout, logout);
 
 export default globalRouter;

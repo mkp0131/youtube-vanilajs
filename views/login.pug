@@ -1,0 +1,11 @@
+extends layouts/main
+include mixins/videoBlock
+
+block content
+	h1 Login
+	.form__container
+		form(action="" method="POST")
+			input(type="text" name="id" placeholder="ID")
+			input(type="password" name="pw" placeholder="Password")
+			button(type="submit" value="Submit")
+				| 로그인

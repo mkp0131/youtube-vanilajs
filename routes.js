@@ -27,7 +27,13 @@ const routes = {
   search: SEARCH,
   // User
   user: USER,
-  userDetail: USER_DETAIL,
+  userDetail: (id) => {
+    if (id) {
+      return `user/${id}`;
+    } else {
+      return USER_DETAIL;
+    }
+  },
   editFrofile: EDIT_FROFILE,
   changePassword: CHANGE_PASSWORD,
   // Video

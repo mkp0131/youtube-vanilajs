@@ -9,9 +9,20 @@ header.header
 			input(type="text" name="term")
 	.header-column
 		ul
-			li
-				a(href="#")
-					| Login
-			li
-				a(href=routes.join)
-					| Join
+			if !user.isAuthenticated
+				li
+					a(href=routes.login)
+						| Login
+				li
+					a(href=routes.join)
+						| Join
+			else
+				li
+					a(href=routes.upload)
+						| Upload
+				li
+					a(href=routes.userDetail(user.id))
+						| profile
+				li
+					a(href=routes.logout)
+						| Logout

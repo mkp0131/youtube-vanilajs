@@ -21,6 +21,14 @@ export const postJoin = (req, res) => {
     res.status(400);
     res.render("join", { pageTitle: "Join" });
   } else {
+    // 회원가입 & 로그인
     res.redirect(routes.home);
   }
+};
+
+export const getLogin = (req, res) => {
+  res.render("login");
+};
+export const postLogin = (req, res) => {
+  res.redirect(routes.home);
 };

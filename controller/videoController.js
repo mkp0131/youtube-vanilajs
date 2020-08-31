@@ -1,10 +1,8 @@
-// 임시 db
-import { videos } from "../db";
 import routes from "../routes";
 
 export const home = (req, res) => {
   console.log("home", res.locals.user);
-  res.render("home", { pageTitle: "Home", videos });
+  res.render("home", { pageTitle: "Home" });
 };
 
 export const getUpload = (req, res) => {

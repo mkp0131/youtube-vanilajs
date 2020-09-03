@@ -3,13 +3,4 @@ include mixins/videoBlock
 
 block content
 	h1 "this is first"
-	.video__list
-		each video in videos
-			+videoBlock({
-				id: video.id,
-				title: video.title,
-				videoFile: video.videoFile,
-				views: video.views,
-			})
-
-
+	

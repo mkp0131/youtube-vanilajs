@@ -1,8 +1,23 @@
 import routes from "../routes";
+import Video from "../models/Video";
 
-export const home = (req, res) => {
-  console.log("home", res.locals.user);
-  res.render("home", { pageTitle: "Home" });
+// await 를 기다리고 render 되는지 테스트해보기
+function delayP(sec) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve("안녕");
+    }, sec);
+  });
+}
+
+export const home = async (req, res) => {
+  try {
+    const videos = await Video.find({});
+    console.log("videos", videos);
+    res.render("home", { pageTitle: "Home", videos });
+  } catch (error) {
+    console.log("home error", error);
+  }
 };
 
 export const getUpload = (req, res) => {
